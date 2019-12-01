@@ -3,7 +3,9 @@ package at.leonschloemmer.diceroller
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,7 +17,17 @@ class MainActivity : AppCompatActivity() {
         rollButton.text = "let's roll!"
 
         rollButton.setOnClickListener {
-            Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this, "button clicked", Toast.LENGTH_SHORT).show()
+            rollDice()
         }
     }
+
+    private fun rollDice() {
+        val resultText: TextView = findViewById(R.id.result_text)
+
+        val random = Random().nextInt(6) + 1
+
+        resultText.text = random.toString()
+    }
+
 }
