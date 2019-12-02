@@ -2,5 +2,14 @@
     <string name="app_name">About me</string>
     <string name="name">Leon Schloemmer</string>
     <string name="yellow_star">Yellow Star</string>
-    <string name="bio">Hi, my name is Leon, I live in Linz and I like to code. In the last six months I\'ve been trying to build a software startup, unfortunately that didn\'t go to well. I acquiered my first customer and eventually had a lot of trouble with them... They didn\'t pay me at all which was quiet concerning, and because of that we almost got into a legal fight... Luckily things turned out okay, because I of course didn\'t do anything wrong! I think this describes me really good. I\'m adventurous, and like to try things out, and like to do things unconventionally.</string>
+    <string name="bio">Hi, my name is Leon, I live in Linz and I like to code.
+        \n\n
+        In the last six months I\'ve been trying to build a software startup, unfortunately that didn\'t go to well.\n
+        I acquiered my first customer and eventually had a lot of trouble with them...\n
+        They didn\'t pay me at all which was quiet concerning, and because of that we almost got into a legal fight...\n
+        Luckily things turned out okay, because I of course didn\'t do anything wrong!\n
+        \n\n
+        I think this describes me really good. I\'m adventurous, and like to try things out, and like to do things unconventionally.</string>
+    <string name="what_is_your_nickname">What is your nickname?</string>
+    <string name="done">done</string>
 </resources>
