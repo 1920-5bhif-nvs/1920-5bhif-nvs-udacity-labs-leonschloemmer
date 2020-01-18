@@ -1,15 +1,16 @@
 <resources>
-    <string name="app_name">About me</string>
+    <string name="app_name">About Me</string>
     <string name="name">Leon Schloemmer</string>
     <string name="yellow_star">Yellow Star</string>
-    <string name="bio">Hi, my name is Leon, I live in Linz and I like to code.
-        \n\n
-        In the last six months I\'ve been trying to build a software startup, unfortunately that didn\'t go to well.\n
-        I acquiered my first customer and eventually had a lot of trouble with them...\n
-        They didn\'t pay me at all which was quiet concerning, and because of that we almost got into a legal fight...\n
-        Luckily things turned out okay, because I of course didn\'t do anything wrong!\n
-        \n\n
-        I think this describes me really good. I\'m adventurous, and like to try things out, and like to do things unconventionally.</string>
-    <string name="what_is_your_nickname">What is your nickname?</string>
+
+    <string name="bio">Hi, my name is Leon
+    \n\nI love to ride my bike and i am a passionate programmer and business man.
+    \n\nAs of right now I am still at the beginning of my journey through life,
+    \n\nand i have no clue where it will lead me to. I am looking forward to
+    \n\nmany exciting things that I will do eventually.
+    \n\nI have two siblings, they are called Leandra and Laurin. Both of them are around 10 years
+    younger than I am, and they are very lovely. Both of them still attend elementary school.
+    \n\nThis year I will graduate from technical college in Leonding.</string>
+    <string name="what_is_your_nickname">What is your Nickname?</string>
     <string name="done">done</string>
 </resources>
