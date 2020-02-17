@@ -63,7 +63,7 @@ class DessertTimer(lifecycle: Lifecycle) : LifecycleObserver {
             // postDelayed re-adds the action to the queue of actions the Handler is cycling
             // through. The delayMillis param tells the handler to run the runnable in
             // 1 second (1000ms)
-            handler.postDelayed(runnable, 1000)
+            handler.postDelayed(runnable, 1000) 
         }
 
         // This is what initially starts the timer
