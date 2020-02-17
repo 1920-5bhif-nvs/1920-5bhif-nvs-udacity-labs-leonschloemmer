@@ -174,6 +174,24 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 //        dessertTimer.stopTimer()
     }
 
+    override fun onSaveInstanceState(outState: Bundle?) {
+        super.onSaveInstanceState(outState)
+
+        outState?.putInt("key_revenue", revenue)
+        outState?.putInt("key_desserts_sold", dessertsSold)
+        outState?.putInt("key_seconds", dessertTimer.secondsCount)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        if (savedInstanceState != null) {
+            revenue = savedInstanceState.getInt("key_revenue", 0)
+            dessertsSold = savedInstanceState.getInt("key_desserts_sold", 0)
+            dessertTimer.secondsCount = savedInstanceState.getInt("key_seconds", 0)
+        }
+    }
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
         return super.onCreateOptionsMenu(menu)
