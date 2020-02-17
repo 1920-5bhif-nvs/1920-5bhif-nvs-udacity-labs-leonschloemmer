@@ -143,7 +143,6 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
                     Toast.LENGTH_LONG).show()
         }
     }
-
     override fun onResume() {
         super.onResume()
         Timber.i("onResume called")
@@ -161,7 +160,7 @@ class MainActivity : AppCompatActivity(), LifecycleObserver {
 
     override fun onRestart() {
         super.onRestart()
-        Timber.i("onRestart called") 
+        Timber.i("onRestart called")
     }
 
     override fun onStop() {
