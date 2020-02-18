@@ -37,9 +37,9 @@ class TitleFragment : Fragment() {
         val binding: TitleFragmentBinding = DataBindingUtil.inflate(
                 inflater, R.layout.title_fragment, container, false)
 
-        binding.playGameButton.setOnClickListener {
+        binding.playGameButton.setOnClickListener { 
             findNavController().navigate(TitleFragmentDirections.actionTitleToGame())
         }
-        return binding.root 
+        return binding.root
     }
 }
