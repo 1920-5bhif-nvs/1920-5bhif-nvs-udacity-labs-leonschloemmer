@@ -1,11 +1,27 @@
 package com.example.android.guesstheword.screens.game
 
+import android.os.CountDownTimer
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
+
+    companion object {
+        // These represent different important times
+        // This is when the game is over
+        const val DONE = 0L
+        // This is the number of milliseconds in a second
+        const val ONE_SECOND = 1000L
+        // This is the total time of the game
+        const val COUNTDOWN_TIME = 60000L
+    }
+
+    var timer: CountDownTimer
+
+    private val _currentTime = MutableLiveData<Long>()
+    val currentTime: LiveData<Long> get() = _currentTime
 
     // The current word
     private val _word = MutableLiveData<String>()
@@ -30,6 +46,21 @@ class GameViewModel : ViewModel() {
 
         resetList()
         nextWord()
+
+        timer = object : CountDownTimer(COUNTDOWN_TIME, ONE_SECOND) {
+
+            override fun onTick(millisUntilFinished: Long) {
+                // TODO implement what should happen each tick of the timer
+                _currentTime.value = millisUntilFinished / 1000
+            }
+
+            override fun onFinish() {
+                // TODO implement what should happen when the timer finishes
+                _eventGameFinished.value = true
+            }
+        }
+
+        timer.start()
     }
 
     /**
@@ -70,10 +101,10 @@ class GameViewModel : ViewModel() {
         //Select and remove a word from the list
         if (wordList.isEmpty()) {
 //            gameFinished()
-            _eventGameFinished.value = true
-        } else {
-            _word.value = wordList.removeAt(0)
+//            _eventGameFinished.value = true
+            resetList()
         }
+        _word.value = wordList.removeAt(0)
     }
 
     fun onSkip() {
@@ -92,6 +123,7 @@ class GameViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
+        timer.cancel()
 
         Log.i("GameViewModel", "GameViewModel destroyed")
     }
