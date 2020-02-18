@@ -68,9 +68,9 @@ class ScoreFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        viewModel.score.observe(this, Observer { newScore ->
-            binding.scoreText.text = newScore.toString()
-        })
+//        viewModel.score.observe(this, Observer { newScore ->
+//            binding.scoreText.text = newScore.toString()
+//        })
         viewModel.eventPlayAgain.observe(this, Observer {
             if (it) {
                 onPlayAgain()
@@ -79,6 +79,7 @@ class ScoreFragment : Fragment() {
         })
 
         binding.scoreViewModel = viewModel
+        binding.lifecycleOwner = this
     }
 
     private fun onPlayAgain() {

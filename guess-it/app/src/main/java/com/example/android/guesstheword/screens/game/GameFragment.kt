@@ -60,12 +60,12 @@ class GameFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        viewModel.score.observe(this, Observer {newScore ->
-            binding.scoreText.text = newScore.toString()
-        })
-        viewModel.word.observe(this, Observer { newWord ->
-            binding.wordText.text = newWord
-        })
+//        viewModel.score.observe(this, Observer {newScore ->
+//            binding.scoreText.text = newScore.toString()
+//        })
+//        viewModel.word.observe(this, Observer { newWord ->
+//            binding.wordText.text = newWord
+//        })
         viewModel.eventGameFinished.observe(this, Observer {
             if (it == true) {
                 gameFinished()
@@ -77,6 +77,7 @@ class GameFragment : Fragment() {
         })
 
         binding.gameViewModel = viewModel
+        binding.lifecycleOwner = this
     }
 
     /**
