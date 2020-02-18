@@ -66,7 +66,7 @@ class GameFragment : Fragment() {
         updateWordText()
 
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
-        Log.i("I/GameFragment", "Called Viewmodeproviders of")
+        Log.i("GameFragment", "Called Viewmodeproviders of")
 
         return binding.root
 
