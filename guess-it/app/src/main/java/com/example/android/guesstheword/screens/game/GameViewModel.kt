@@ -72,7 +72,7 @@ class GameViewModel : ViewModel() {
         }
     }
 
-    fun onSkip() {
+    fun onSkip() { 
         _score.value = score.value?.minus(1)
         nextWord()
     }
