@@ -67,7 +67,7 @@ class GameFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         viewModel.score.observe(this, Observer {newScore ->
-            binding.scoreText.text = newScore
+            binding.scoreText.text = newScore.toString()
         })
         viewModel.word.observe(this, Observer { newWord ->
             binding.wordText.text = newWord
