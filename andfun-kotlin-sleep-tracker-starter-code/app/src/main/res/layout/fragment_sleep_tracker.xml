@@ -48,7 +48,7 @@
             <!-- In the TextView, we can access the nightsString LiveData,
                  which keeps it displayed and updated in the TextView
                  whenever it changes. -->
-
+ 
             <TextView
                 android:id="@+id/textview"
                 android:layout_width="match_parent"
