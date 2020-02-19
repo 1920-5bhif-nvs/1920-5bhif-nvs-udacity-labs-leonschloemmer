@@ -23,7 +23,9 @@
          the whole ViewModel, so that we can access the LiveData,
          click handlers, and state variables. -->
     <data>
-
+        <variable
+            name="sleepTrackerViewModel"
+            type="com.example.android.trackmysleepquality.sleeptracker.SleepTrackerViewModel" />
     </data>
 
     <!-- Start of the visible fragment layout using ConstraintLayout -->
@@ -48,7 +50,7 @@
             <!-- In the TextView, we can access the nightsString LiveData,
                  which keeps it displayed and updated in the TextView
                  whenever it changes. -->
-            
+
             <TextView
                 android:id="@+id/textview"
                 android:layout_width="match_parent"
